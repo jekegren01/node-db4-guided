@@ -27,4 +27,14 @@ router.get("/zoos/:id", async (req, res, next) => {
 	}
 })
 
+//added endpoint for getting all animals by specific zooID
+router.get("/zoos/:id/animals", async (req, res, next) => {
+	try {
+		const animals = await Zoo.findZooAnimals(req.params.id)
+		res.json(animals)
+	} catch(err) {
+		next(err)
+	}
+}) 
+
 module.exports = router

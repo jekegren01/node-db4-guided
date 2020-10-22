@@ -33,3 +33,18 @@ For `animals`, the client wants to record:
 - list of all the zoos where they have resided.
 
 Determine the database tables necessary to track this information. Label any relationships between tables.
+
+## Notes
+
+- Normalization = The process of designing our database schema in a way that prevents redundancies.
+
+-- Guidelines
+--- No field values are repeated
+--- There are no redundant records
+--- Each record has a unique primary key
+--- All fields in a table should relate to the primary key
+
+-- Relationship Types
+--- 1 to 1 - this is a direct relationship from 1 table to another
+--- 1 to many - this is a relationship where 1 from table A relates to many in table B.  foreign key goes on the many side
+--- many to many - when many in Table A relate to many in Table B and vise versa.  These usually require an intermediate table to hold all the foreign keys.
